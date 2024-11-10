@@ -2,6 +2,8 @@
 
 A simple task management application built using Laravel PHP and MySQL. This application allows users to manage their to-do lists with features like adding, viewing, editing, deleting, and marking tasks as completed. It also includes basic authentication functionality such as login, logout, registration, and forgot password.
 
+![cdc](images/loginpage.png)
+
 ## Features
 
 ### Task Management
