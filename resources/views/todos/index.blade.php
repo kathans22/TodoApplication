@@ -27,12 +27,22 @@
                             </div>
                         @endif
 
+                        @if (Session::has('alert-info'))
+                            <div class="alert alert-info" role="alert">
+                                {{ Session::get('alert-info') }}
+                            </div>
+                        @endif
+
 
                         @if (Session::has('error'))
                             <div class="alert alert-danger" role="alert">
                                 {{ Session::get('error') }}
                             </div>
                         @endif
+
+                        <a class="btn btn-sm btn-info" href="{{ route('todos.create') }}">
+                            Create Todo
+                        </a>
 
                         @if ($todos && $todos->count() > 0)
                             <table class="table">
@@ -65,7 +75,9 @@
 
 
 
-                                                <form action="" class = 'inner'>
+                                                <form method="post" action="{{ route('todos.destroy') }}" class = 'inner'>
+                                                    @csrf
+                                                    @method('DELETE')
                                                     <input type="hidden" name="todo_id" value="{{ $todo->id }}">
                                                     <input type="submit" class="btn btn-sm btn-danger" value= "Delete">
                                                 </form>
