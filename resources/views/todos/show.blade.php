@@ -18,8 +18,11 @@
                             </div>
                         @endif
 
-
-                        <b> your Todo titlw is: </b> {{ $todo->title }}
+                        <a href="{{ url()->previous() ?? route('todos.index') }}" class="btn btn-sm btn-info">
+                            Go Back
+                        </a>
+                        <br>
+                        <b> your Todo title is: </b> {{ $todo->title }} <br>
                         <b>Your Todo description</b> {{ $todo->description }}
 
 

@@ -27,6 +27,13 @@
                             </div>
                         @endif
 
+
+                        @if (Session::has('error'))
+                            <div class="alert alert-danger" role="alert">
+                                {{ Session::get('error') }}
+                            </div>
+                        @endif
+
                         @if ($todos && $todos->count() > 0)
                             <table class="table">
                                 <thead>
@@ -53,7 +60,8 @@
                                                 <a class="inner btn btn-sm btn-info"
                                                     href="{{ route('todos.show', $todo->id) }}">View</a>
 
-                                                <a class="inner btn btn-sm btn-success" href="">Edit</a>
+                                                <a class="inner btn btn-sm btn-success"
+                                                    href="{{ route('todos.edit', $todo->id) }}">Edit</a>
 
 
 

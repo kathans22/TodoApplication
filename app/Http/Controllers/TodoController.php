@@ -47,6 +47,45 @@ class TodoController extends Controller
 
     public function show($id)
     {
-        return $id;
+        $todo = Todo::find($id);
+
+        if(!$todo)
+        {
+            request()->session()->flash('error','Unable to locate the Todo');
+
+            return to_route('todos.index')->withErrors([
+
+                'error' => 'Unable to locate the Todo'
+
+            ]);
+        }
+
+        return view('todos.show', ['todo' => $todo]);
+    }
+
+    public function edit($id)
+    {
+        $todo = Todo::find($id);
+
+        if(!$todo)
+        {
+            request()->session()->flash('error','Unable to locate the Todo');
+
+            return to_route('todos.index')->withErrors([
+
+                'error' => 'Unable to locate the Todo'
+
+            ]);
+        }
+
+        return view('todos.edit', ['todo' => $todo]);
+    }
+
+
+    public function update(TodoRequest $request)
+    {
+        return $request->all();
+
+
     }
 }
