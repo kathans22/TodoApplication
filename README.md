@@ -2,7 +2,7 @@
 
 A simple task management application built using Laravel PHP and MySQL. This application allows users to manage their to-do lists with features like adding, viewing, editing, deleting, and marking tasks as completed. It also includes basic authentication functionality such as login, logout, registration, and forgot password.
 
-![cdc](images/loginpage.png)
+
 
 ## Features
 
@@ -118,5 +118,14 @@ Visit TodoApplication.infinityfreeapp.com in your browser to access the applicat
 | POST   | `/password/reset`        | Reset password                  |
 
 
-
+![cdc](images/loginpage.png)
+![cdc](images/validation.png)
+![cdc](images/authentication.png)
+![cdc](images/authenticationofnewuser.png)
+![cdc](images/view.png)
+![cdc](images/todocreated.png)
+![cdc](images/editdata.png)
+![cdc](images/updated.png)
+![cdc](images/view2.png)
+![cdc](images/delete.png)
 
