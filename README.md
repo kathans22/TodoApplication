@@ -95,7 +95,9 @@ Start the Laravel development server:
 php artisan serve
 ```
 
-Visit http://localhost:8000 in your browser to access the application.
+Visit TodoApplication.infinityfreeapp.com in your browser to access the application.
+
+![imag1](images/Screenshot (2725).png)
 
 ## API Endpoints
 
